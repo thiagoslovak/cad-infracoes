@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "5ddfbde3-7362-4bd0-8a50-e0d5eca023be",
+		"name": "cad-infracoes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "18447127",
+		"_collection_link": "https://bold-robot-870596.postman.co/workspace/Cresol~008114a6-a658-4029-a804-18dc7cae736c/collection/18447127-5ddfbde3-7362-4bd0-8a50-e0d5eca023be?action=share&source=collection_link&creator=18447127"
+	},
+	"item": [
+		{
+			"name": "Equipment",
+			"item": [
+				{
+					"name": "localhost:8080/equipments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InRoaWFnb3Nsb3ZhayIsImV4cCI6MTc1MzA1NTU5MX0.Gm7rBAlmVFjfJ_8zgsj-0bRw04M0V6amZr-55-2okcI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"serial\": \"1222344\",\r\n    \"model\": \"Modelo Teste\",\r\n    \"address\": \"Address Teste\",\r\n    \"latitude\": 89,\r\n    \"longitude\": 179,\r\n    \"active\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/equipments"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/equipments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InRoaWFnb3Nsb3ZhayIsImV4cCI6MTc1MzA0Mzc0M30.PlvwMfDZHJd4wee-i1D9c1JBwlyaz392qgARMqYFQGY",
+								"type": "text"
+							}
+						],
+						"url": "localhost:8080/equipments"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/equipments/{serial}",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InRoaWFnb3Nsb3ZhayIsImV4cCI6MTc1MzA0Mzc0M30.PlvwMfDZHJd4wee-i1D9c1JBwlyaz392qgARMqYFQGY",
+								"type": "text"
+							}
+						],
+						"url": "localhost:8080/equipments/122234"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/equipments/1222344/violations",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InRoaWFnb3Nsb3ZhayIsImV4cCI6MTc1MzA0Mzc0M30.PlvwMfDZHJd4wee-i1D9c1JBwlyaz392qgARMqYFQGY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8080/equipments/123/violations?from=2025-05-09 18:42:00&to=2025-05-09 18:42:00",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"equipments",
+								"123",
+								"violations"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-05-09 18:42:00"
+								},
+								{
+									"key": "to",
+									"value": "2025-05-09 18:42:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "localhost:8080/auth/register",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"thiagoslovak\",\r\n    \"password\": \"123456789\",\r\n    \"role\": \"ADMIN\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/auth/login",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"thiagoslovak\",\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/auth/login"
+					},
+					"response": []
+				}
+			],
+			"description": "StartFragmentauthEndFragment"
+		},
+		{
+			"name": "Violation",
+			"item": [
+				{
+					"name": "localhost:8080/violations",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InRoaWFnb3Nsb3ZhayIsImV4cCI6MTc1MzA0NjEyMX0.PWJlw47ZvgUCW_SqCX8X26E_lVREg5nIH83ovn62a3Q",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"equipmentSerial\": \"1222344\",\r\n    \"occurrenceDateUtc\": \"2025-05-09 18:42:00\",\r\n    \"measuredSpeed\": 1,\r\n    \"consideredSpeed\": 2,\r\n    \"regulatedSpeed\": 3,\r\n    \"picture\": \"axaxax\",\r\n    \"type\": \"VELOCITY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/violations"
+					},
+					"response": []
+				},
+				{
+					"name": "localhost:8080/violations/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhdXRoLWFwaSIsInN1YiI6InRoaWFnb3Nsb3ZhayIsImV4cCI6MTc1MzA0Mzc0M30.PlvwMfDZHJd4wee-i1D9c1JBwlyaz392qgARMqYFQGY",
+								"type": "text"
+							}
+						],
+						"url": "localhost:8080/violations/370215ad-633f-4dea-a036-a72e2590e989"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
