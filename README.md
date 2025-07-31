@@ -1,6 +1,6 @@
-# API de Cadastro de Infrações
+# API de Cadastro de InfraÃ§Ãµes
 
-Serviços desenvolvidos utilizando:
+ServiÃ§os desenvolvidos utilizando:
 
 * Java 17
 * Spring Boot 3
@@ -12,16 +12,12 @@ Serviços desenvolvidos utilizando:
 * Domain-Driven Design
 
 
-## Instruções de uso da aplicação:
+## InstruÃ§Ãµes de uso da aplicaÃ§Ã£o:
 
 1. Importe as collection que se encontra no path /collection no Postman.
-2. Pode ser utilizado a aplicação também via swagger http://localhost:8080/swagger-ui/index.html#/
-3. Para rodar a aplicação, execute o comando `mvn clean install -e` na raiz do projeto para gerar o .jar.
-4. E com isso, execute o comando `docker compose up` na raiz do projeto para iniciar a aplicação.
-5. Primeiro, para iniciar faça a criação do usuário em /register.
-5. Após a criação do usuário, faça o login em /login para obter o token JWT.
-6. Nisso, já é possível acessar os endpoints protegidos com o token JWT obtido no login.
-
-
-Qual foi o aspecto mais difícil deste desafio e por quê?
-* Foi realizar a implementação do JWT Bearer, pois não tinha feito projetos utilizando JWT antes, pois utilizamos o Keycloak para autenticação e autorização em outros projetos. Mas foi um desafio interessante e que agregou muito conhecimento.
+2. Pode ser utilizado a aplicaÃ§Ã£o tambÃ©m via swagger http://localhost:8080/swagger-ui/index.html#/
+3. Para rodar a aplicaÃ§Ã£o, execute o comando `mvn clean install -e` na raiz do projeto para gerar o .jar.
+4. E com isso, execute o comando `docker compose up` na raiz do projeto para iniciar a aplicaÃ§Ã£o.
+5. Primeiro, para iniciar faÃ§a a criaÃ§Ã£o do usuÃ¡rio em /register.
+5. ApÃ³s a criaÃ§Ã£o do usuÃ¡rio, faÃ§a o login em /login para obter o token JWT.
+6. Nisso, jÃ¡ Ã© possÃ­vel acessar os endpoints protegidos com o token JWT obtido no login.
